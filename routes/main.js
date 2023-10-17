@@ -10,6 +10,9 @@ module.exports = function(app, shopData) {
     app.get('/search',function(req,res){
         res.render("search.ejs", shopData);
     });
+    app.get('/new', function (req, res) { 
+        res.render("new.ejs", shopData )
+    })
     app.get('/search-result', function (req, res) {
         //searching in the database
         //res.send("You searched for: " + req.query.keyword);
